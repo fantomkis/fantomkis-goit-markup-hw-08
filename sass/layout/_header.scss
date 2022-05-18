@@ -1,0 +1,135 @@
+//шапка 
+
+
+.header {
+  border-bottom: 1px solid #ececec;
+  background-color: var();
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+// навігация в хедері
+.nav {
+  display: none;
+  
+  @include mq(tab){
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav__list{
+ display: none;
+
+  @include mq(tab){
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav__item:not(:last-child){
+  margin-right: 50px;
+}
+
+.nav__link.nav__link--active {
+  color: var(--accent-color);
+}
+.nav__link--carent::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+
+.nav__link--active {
+  color: var(--accent-color);
+}
+
+.nav__link {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: var(--title-text-color);
+  padding: 32px 0;
+  position: relative;
+  transition: color, var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+//адрес секція
+
+
+.adres{
+  display: none;
+ 
+
+  @include mq(tab){
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
+  @include mq(desk){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+  }
+}
+
+
+.adrec__icon--tel {
+  margin-left: 0;
+  @include mq(desk){
+    margin-left: 50px;
+  }
+  
+}
+
+
+.adres__link{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  color: #757575;
+  display: flex;
+  align-items: center;
+  transition: color, var(--transition);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+  
+}
+
+
+.adrec__icon {
+  display: block;
+  fill: currentColor;
+  margin-right: 10px;
+}
+.adres__item:not(:last-child){
+
+  display: block;
+  margin-bottom: 10px;
+  @include mq(desk){
+    margin-bottom: 0;
+  }
+}
