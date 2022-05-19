@@ -762,6 +762,7 @@ img {
 
 .mobil-menu.is-open {
   transform: translateX(0);
+  z-index: 2;
 }
 
 .mabil-menu-nav {
