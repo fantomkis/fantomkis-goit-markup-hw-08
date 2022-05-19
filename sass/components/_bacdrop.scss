@@ -90,11 +90,16 @@
 .text-modal {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
   margin-bottom: 12px;
+  @include mq(desk){
+    font-size: 20px;
+    line-height: 1.15;
+  
+  }
 }
 
 
